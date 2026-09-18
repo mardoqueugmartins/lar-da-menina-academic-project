@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Conheça as frentes de atuação do Lar da Menina e as formas de doar e colaborar com a instituição."
+    />
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <title>Nossos Projetos - Lar da Menina</title>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="header-container">
+        <a href="index.html" class="logo">
+          <img src="assets/icons/logo-lar-menu.webp" alt="Logo Lar da Menina" />
+        </a>
+
+        <input type="checkbox" id="menu-toggle" class="menu-toggle-input" />
+        <label for="menu-toggle" class="menu-toggle" aria-label="Abrir menu">
+          <span class="menu-toggle-icon"></span>
+        </label>
+
+        <nav class="menu" aria-label="Navegação principal">
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li class="dropdown">
+              <a href="projetos.html" class="active">Projetos</a>
+              <ul class="submenu">
+                <li>
+                  <a href="projetos.html#frentes-atuacao">Frentes de atuação</a>
+                </li>
+                <li><a href="projetos.html#doacoes">Doações</a></li>
+              </ul>
+            </li>
+            <li><a href="cadastro.html">Faça parte</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="conteudo-projetos">
+      <div class="titulo-pagina-container">
+        <h1>Nossas frentes de atuação e engajamento</h1>
+        <p>
+          Conheça as diretrizes de acolhimento e descubra como fazer a diferença
+          no Lar da Menina.
+        </p>
+      </div>
+
+      <section id="frentes-atuacao">
+        <h2>Nossas frentes de ação</h2>
+
+        <div class="grid-projetos">
+          <article class="card-projeto" data-area="saude">
+            <div class="badges">
+              <span class="badge badge-projeto">Saúde</span>
+              <span class="badge badge-sucesso">Ativo</span>
+            </div>
+            <h3>Saúde e Proteção</h3>
+            <p>
+              Garantimos atendimento psicossocial contínuo e acompanhamento
+              médico básico para o bem-estar físico e emocional das meninas
+              acolhidas.
+            </p>
+          </article>
+
+          <article class="card-projeto" data-area="educacao">
+            <div class="badges">
+              <span class="badge badge-projeto">Educação</span>
+              <span class="badge badge-sucesso">Ativo</span>
+            </div>
+            <h3>Educação e Futuro</h3>
+            <p>
+              Oferecemos reforço escolar diário e oficinas pedagógicas
+              complementares para reverter a defasagem escolar e expandir
+              horizontes.
+            </p>
+          </article>
+
+          <article class="card-projeto" data-area="esporte">
+            <div class="badges">
+              <span class="badge badge-projeto">Esporte</span>
+              <span class="badge badge-alerta">Novo</span>
+            </div>
+            <h3>Esporte e Saúde Motora</h3>
+            <p>
+              Promovemos a prática de atividades físicas organizadas, ensinando
+              disciplina, trabalho em equipe e estimulando a saúde.
+            </p>
+          </article>
+
+          <article class="card-projeto" data-area="cultura">
+            <div class="badges">
+              <span class="badge badge-projeto">Cultura</span>
+              <span class="badge badge-sucesso">Ativo</span>
+            </div>
+            <h3>Lazer e Cultura</h3>
+            <p>
+              Desenvolvemos oficinas de arte, teatro e música, proporcionando
+              momentos genuínos de infância, criatividade e expressão.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="doacoes">
+        <h2>Como doar</h2>
+
+        <div class="alert alert-info">
+          <span class="alert-icone">i</span>
+          <p>
+            Todas as doações recebidas são destinadas exclusivamente à
+            manutenção dos projetos socioassistenciais do Lar da Menina.
+          </p>
+        </div>
+
+        <div class="grid-doacoes">
+          <article class="card-doacao">
+            <span class="badge badge-alerta">Necessidade urgente</span>
+            <h3>Pix ou transferência</h3>
+            <p>
+              Contribua com qualquer valor, de forma pontual ou recorrente,
+              diretamente para a conta institucional.
+            </p>
+            <a href="#modal-doacao" class="btn-acao btn-outline-claro"
+              >Ver dados para doação</a
+            >
+          </article>
+
+          <article class="card-doacao">
+            <span class="badge badge-info">Sempre bem-vinda</span>
+            <h3>Doação de itens</h3>
+            <p>
+              Alimentos não perecíveis, itens de higiene, uniformes e material
+              escolar ajudam diretamente no dia a dia das meninas.
+            </p>
+            <a href="cadastro.html" class="btn-acao btn-outline-claro"
+              >Quero doar itens</a
+            >
+          </article>
+
+          <article class="card-doacao">
+            <span class="badge badge-sucesso">Impacto contínuo</span>
+            <h3>Apadrinhamento mensal</h3>
+            <p>
+              Torne-se madrinha ou padrinho e sustente, todos os meses, a rotina
+              de cuidado, saúde e educação de uma assistida.
+            </p>
+            <a href="cadastro.html" class="btn-acao btn-outline-claro"
+              >Quero apadrinhar</a
+            >
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- Modal — dados para doação (técnica :target, 100% CSS) -->
+    <div class="modal" id="modal-doacao">
+      <div
+        class="modal-content"
+        role="dialog"
+        aria-labelledby="titulo-modal-doacao"
+      >
+        <a href="#doacoes" class="modal-fechar" aria-label="Fechar janela">×</a>
+        <h2 id="titulo-modal-doacao">Dados para doação</h2>
+        <p>
+          Escolha a forma mais conveniente para contribuir com o Lar da Menina:
+        </p>
+        <ul>
+          <li class="modal-dado">
+            <span>Pix (CNPJ)</span> <strong>11.111.111/0001-11</strong>
+          </li>
+          <li class="modal-dado">
+            <span>Banco</span> <strong>Banco do Brasil</strong>
+          </li>
+          <li class="modal-dado">
+            <span>Agência</span> <strong>1233-5</strong>
+          </li>
+          <li class="modal-dado">
+            <span>Conta</span> <strong>111.135-3</strong>
+          </li>
+        </ul>
+        <div class="modal-actions">
+          <a href="#doacoes" class="btn-acao btn-outline-claro">Fechar</a>
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <img src="assets/icons/logo-lar.webp" alt="Lar da Menina" />
+          <p>
+            Transformando vidas através do acolhimento, educação, saúde e
+            cuidado.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h3>Contato</h3>
+          <p>Maceió - AL</p>
+          <p><a href="tel:+5582999999999">(82) 99999-9999</a></p>
+          <p>
+            <a href="mailto:contato@lardamenina.org">contato@lardamenina.org</a>
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h3>Links rápidos</h3>
+          <a href="index.html">Início</a>
+          <a href="projetos.html">Projetos</a>
+          <a href="cadastro.html">Seja colaborador</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © 2026 Lar da Menina. Todos os direitos reservados.
+      </div>
+    </footer>
+  </body>
+</html>

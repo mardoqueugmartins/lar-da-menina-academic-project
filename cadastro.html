@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Cadastre-se como voluntário ou doador do Lar da Menina e ajude a transformar a vida de meninas em situação de vulnerabilidade."
+    />
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <title>Faça Parte - Lar da Menina</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-container">
+        <a href="index.html" class="logo">
+          <img src="assets/icons/logo-lar-menu.webp" alt="Logo Lar da Menina" />
+        </a>
+
+        <input type="checkbox" id="menu-toggle" class="menu-toggle-input" />
+        <label for="menu-toggle" class="menu-toggle" aria-label="Abrir menu">
+          <span class="menu-toggle-icon"></span>
+        </label>
+
+        <nav class="menu" aria-label="Navegação principal">
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li class="dropdown">
+              <a href="projetos.html">Projetos</a>
+              <ul class="submenu">
+                <li>
+                  <a href="projetos.html#frentes-atuacao">Frentes de atuação</a>
+                </li>
+                <li><a href="projetos.html#doacoes">Doações</a></li>
+              </ul>
+            </li>
+            <li><a href="cadastro.html" class="active">Faça parte</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="conteudo-cadastro">
+      <div class="titulo-pagina-container">
+        <h1>Formulário de Engajamento Institucional</h1>
+        <p>
+          Escolha como deseja colaborar com o Lar da Menina e preencha seus
+          dados com atenção para garantir a integridade do seu registro.
+        </p>
+      </div>
+
+      <div class="alert alert-info">
+        <span class="alert-icone">i</span>
+        <p>
+          Após o envio, nossa equipe entrará em contato em até 3 dias úteis por
+          e-mail ou telefone para confirmar seu cadastro.
+        </p>
+      </div>
+
+      <section class="formulario-container">
+        <h2>Ficha de Cadastro de Colaboradores</h2>
+
+        <form action="#" method="POST" id="form-engajamento">
+          <fieldset>
+            <legend>Dados Pessoais</legend>
+
+            <div class="campo-grupo">
+              <label for="nome">Nome Completo:</label>
+              <input
+                type="text"
+                id="nome"
+                name="nome"
+                required
+                minlength="3"
+                placeholder="Digite seu nome completo"
+              />
+            </div>
+
+            <div class="campo-grupo">
+              <label for="email">E-mail Corporativo/Pessoal:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="exemplo@email.com"
+              />
+            </div>
+
+            <div class="campo-grupo">
+              <label for="cpf">CPF (com pontos e hífen):</label>
+              <input
+                type="text"
+                id="cpf"
+                name="cpf"
+                required
+                pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+                maxlength="14"
+                placeholder="000.000.000-00"
+                title="Digite o CPF no formato: 000.000.000-00"
+                aria-describedby="cpf-helper"
+              />
+              <small id="cpf-helper" class="texto-ajuda"
+                >Formato obrigatório: 000.000.000-00</small
+              >
+            </div>
+
+            <div class="campo-grupo">
+              <label for="telefone">Telefone / WhatsApp (com DDD):</label>
+              <input
+                type="tel"
+                id="telefone"
+                name="telefone"
+                required
+                pattern="\(\d{2}\) \d{5}-\d{4}"
+                maxlength="15"
+                placeholder="(82) 99999-9999"
+                title="Digite o telefone no formato: (82) 99999-9999"
+                aria-describedby="tel-helper"
+              />
+              <small id="tel-helper" class="texto-ajuda"
+                >Formato obrigatório: (00) 90000-0000</small
+              >
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Endereço Residencial</legend>
+
+            <div class="campo-grupo">
+              <label for="cep">CEP (com hífen):</label>
+              <input
+                type="text"
+                id="cep"
+                name="cep"
+                required
+                pattern="\d{5}-\d{3}"
+                maxlength="9"
+                placeholder="00000-000"
+                title="Digite o CEP no formato: 00000-000"
+                aria-describedby="cep-helper"
+              />
+              <small id="cep-helper" class="texto-ajuda"
+                >Formato obrigatório: 00000-000</small
+              >
+            </div>
+
+            <div class="campo-grupo">
+              <label for="logradouro">Logradouro (Rua/Avenida):</label>
+              <input
+                type="text"
+                id="logradouro"
+                name="logradouro"
+                required
+                placeholder="Ex: Rua do Acolhimento, nº 10"
+              />
+            </div>
+
+            <div class="campo-grupo">
+              <label for="bairro">Bairro:</label>
+              <input
+                type="text"
+                id="bairro"
+                name="bairro"
+                required
+                placeholder="Ex: Jacintinho"
+              />
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Tipo de Contribuição</legend>
+
+            <div class="campo-grupo-radio">
+              <p class="label-fake">Como deseja nos ajudar?</p>
+
+              <label class="radio-label">
+                <input
+                  type="radio"
+                  name="tipo_ajuda"
+                  value="voluntario"
+                  required
+                  checked
+                />
+                Trabalho Voluntário (Doação de tempo)
+              </label>
+
+              <label class="radio-label">
+                <input type="radio" name="tipo_ajuda" value="doador" />
+                Doador Fixo/Material (Doação de insumos ou recursos)
+              </label>
+            </div>
+
+            <div class="campo-grupo">
+              <label for="mensagem">Mensagem / Observações (Opcional):</label>
+              <textarea
+                id="mensagem"
+                name="mensagem"
+                rows="4"
+                placeholder="Conte-nos um pouco sobre suas motivações ou disponibilidade de horários."
+              ></textarea>
+            </div>
+
+            <a href="#modal-privacidade" class="link-modal"
+              >Como usamos os seus dados?</a
+            >
+          </fieldset>
+
+          <div class="acoes-formulario">
+            <button type="submit" class="btn-enviar">Concluir Registro</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <!-- Modal — uso de dados pessoais (técnica :target, 100% CSS) -->
+    <div class="modal" id="modal-privacidade">
+      <div
+        class="modal-content"
+        role="dialog"
+        aria-labelledby="titulo-modal-privacidade"
+      >
+        <a
+          href="#form-engajamento"
+          class="modal-fechar"
+          aria-label="Fechar janela"
+          >×</a
+        >
+        <h2 id="titulo-modal-privacidade">Como usamos os seus dados</h2>
+        <p>
+          As informações preenchidas neste formulário são utilizadas
+          exclusivamente pela equipe do Lar da Menina para viabilizar seu
+          cadastro como voluntário(a) ou doador(a).
+        </p>
+        <p>
+          Não compartilhamos seus dados com terceiros e você pode solicitar a
+          atualização ou exclusão do seu registro a qualquer momento pelo e-mail
+          de contato informado no rodapé do site.
+        </p>
+        <div class="modal-actions">
+          <a href="#form-engajamento" class="btn-acao btn-outline-claro"
+            >Entendi</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <img src="assets/icons/logo-lar.webp" alt="Lar da Menina" />
+          <p>
+            Transformando vidas através do acolhimento, educação, saúde e
+            cuidado.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h3>Contato</h3>
+          <p>Maceió - AL</p>
+          <p><a href="tel:+5582999999999">(82) 99999-9999</a></p>
+          <p>
+            <a href="mailto:contato@lardamenina.org">contato@lardamenina.org</a>
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h3>Links rápidos</h3>
+          <a href="index.html">Início</a>
+          <a href="projetos.html">Projetos</a>
+          <a href="cadastro.html">Seja colaborador</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © 2026 Lar da Menina. Todos os direitos reservados.
+      </div>
+    </footer>
+  </body>
+</html>
