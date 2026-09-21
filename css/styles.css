@@ -1,67 +1,37 @@
-/* =====================================================================
-   LAR DA MENINA — DESIGN SYSTEM
-   Plataforma institucional em HTML5 + CSS3 puro (sem frameworks/JS)
-
-   Sumário
-   01. Tokens de design (cores, tipografia, espaçamento, sombra)
-   02. Reset e base tipográfica
-   03. Layout macro — grid de 12 colunas (5 breakpoints)
-   04. Cabeçalho e navegação (flexbox + dropdown + menu hambúrguer)
-   05. Botões e estados interativos
-   06. Tags / badges de categorização
-   07. Alertas contextuais
-   08. Modais (técnica :target — 100% CSS)
-   09. Seção Hero (index)
-   10. Seção Institucional / Missão
-   11. Galeria e depoimento
-   12. Faixa de chamada (CTA)
-   13. Cards de projetos
-   14. Seção de doações
-   15. Formulário de cadastro
-   16. Rodapé
-   17. Ajustes finos de responsividade
-========================================================================= */
-
-/* =====================================================================
-   01 — TOKENS DE DESIGN
-========================================================================= */
 :root {
-  /* Paleta institucional — extraída da identidade visual (casa, flor, folhas) */
-  --clr-primary-100: #f7e3ee; /* rosa muito claro — fundos de destaque      */
-  --clr-primary-300: #e2a9c4; /* rosa claro — hover suave                   */
-  --clr-primary-500: #c1487b; /* rosa — cor de ação primária                */
-  --clr-primary-700: #93335f; /* rosa escuro — texto sobre claro, hover     */
+  --clr-primary-100: #f7e3ee;
+  --clr-primary-300: #e2a9c4;
+  --clr-primary-500: #c1487b;
+  --clr-primary-700: #93335f;
 
-  --clr-secondary-500: #6f9c3f; /* verde-folha — sucesso / natureza           */
-  --clr-secondary-700: #4f7a2a; /* verde escuro                               */
+  --clr-secondary-500: #6f9c3f;
+  --clr-secondary-700: #4f7a2a;
+  --clr-accent-700: #5c3a21;
+  --clr-accent-900: #3a220f;
 
-  --clr-accent-700: #5c3a21; /* marrom da marca — títulos, rodapé          */
-  --clr-accent-900: #3a220f; /* marrom profundo — fundo do rodapé          */
+  --clr-cream-50: #fdf8f4;
+  --clr-cream-100: #f6eade;
+  --clr-surface: #ffffff;
 
-  --clr-cream-50: #fdf8f4; /* fundo geral da página                     */
-  --clr-cream-100: #f6eade; /* superfície secundária                     */
-  --clr-surface: #ffffff; /* cartões, formulário, cabeçalho             */
-
-  --clr-ink-900: #33221a; /* texto principal                            */
-  --clr-ink-600: #756258; /* texto secundário                          */
-  --clr-ink-300: #d9cec5; /* bordas neutras                             */
+  --clr-ink-900: #33221a;
+  --clr-ink-600: #756258;
+  --clr-ink-300: #d9cec5;
 
   --clr-success: #6f9c3f;
   --clr-warning: #c07f1f;
   --clr-error: #b3402e;
   --clr-info: #3d7ea6;
 
-  /* Tipografia — serifada humanista para títulos, sans discreta no corpo */
   --ff-heading: "Nunito", sans-serif;
   --ff-body: "Karla", system-ui, -apple-system, sans-serif;
 
-  --fs-0: 0.8125rem; /* 13px — apoio, legendas       */
-  --fs-1: 0.9375rem; /* 15px — texto pequeno         */
-  --fs-2: 1rem; /* 16px — corpo de texto        */
-  --fs-3: 1.25rem; /* 20px — subtítulo / h3        */
-  --fs-4: 1.75rem; /* 28px — h2                    */
-  --fs-5: 2.25rem; /* 36px — h1                    */
-  --fs-6: 3rem; /* 48px — destaque hero (desktop) */
+  --fs-0: 0.8125rem;
+  --fs-1: 0.9375rem;
+  --fs-2: 1rem;
+  --fs-3: 1.25rem;
+  --fs-4: 1.75rem;
+  --fs-5: 2.25rem;
+  --fs-6: 3rem;
 
   --fw-regular: 400;
   --fw-medium: 600;
@@ -70,7 +40,6 @@
   --lh-tight: 1.2;
   --lh-base: 1.65;
 
-  /* Espaçamento modular — base 4px */
   --space-2xs: 0.25rem;
   --space-xs: 0.5rem;
   --space-sm: 0.75rem;
@@ -90,14 +59,8 @@
   --shadow-header: 0 4px 22px rgba(58, 34, 15, 0.08);
 
   --container-max: 1200px;
-
-  /* Breakpoints de referência (documentação — ver seção 03)
-     bp-1: 480px  · bp-2: 768px · bp-3: 1024px · bp-4: 1280px · bp-5: 1600px */
 }
 
-/* =====================================================================
-   02 — RESET E BASE TIPOGRÁFICA
-========================================================================= */
 * {
   margin: 0;
   padding: 0;
@@ -157,7 +120,6 @@ fieldset {
   border: none;
 }
 
-/* Foco visível para navegação por teclado (acessibilidade) */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
@@ -172,11 +134,6 @@ textarea:focus-visible {
   padding: 0 var(--space-md);
 }
 
-/* =====================================================================
-   03 — LAYOUT MACRO: GRID DE 12 COLUNAS
-   Aplicado às seções estruturais da página. Mobile-first, com 5
-   breakpoints distintos (480 / 768 / 1024 / 1280 / 1600px).
-========================================================================= */
 .grid-12 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -213,10 +170,6 @@ textarea:focus-visible {
   }
 }
 
-/* =====================================================================
-   04 — CABEÇALHO E NAVEGAÇÃO
-   Estrutura macro do header via flexbox (alinhamento de componentes).
-========================================================================= */
 .site-header {
   background: var(--clr-surface);
   box-shadow: var(--shadow-header);
@@ -240,7 +193,6 @@ textarea:focus-visible {
   height: auto;
 }
 
-/* Menu principal */
 .menu ul {
   display: flex;
   align-items: flex-start;
@@ -268,7 +220,6 @@ textarea:focus-visible {
   border-bottom-color: var(--clr-primary-500);
 }
 
-/* Dropdown "Projetos" — funcional via :hover e :focus-within (teclado) */
 .dropdown {
   position: relative;
 }
@@ -336,7 +287,6 @@ textarea:focus-visible {
   color: var(--clr-primary-700);
 }
 
-/* Menu hambúrguer (mobile) — via checkbox, sem JavaScript */
 .menu-toggle-input {
   display: none;
 }
@@ -431,9 +381,6 @@ textarea:focus-visible {
   }
 }
 
-/* =====================================================================
-   05 — BOTÕES E ESTADOS INTERATIVOS
-========================================================================= */
 .btn-acao {
   display: inline-flex;
   align-items: center;
@@ -478,7 +425,6 @@ textarea:focus-visible {
   border-color: transparent;
 }
 
-/* Variante para uso sobre fundo claro (fora do hero) */
 .btn-outline-claro {
   background: transparent;
   border-color: var(--clr-primary-500);
@@ -525,9 +471,6 @@ button:disabled,
   box-shadow: none !important;
 }
 
-/* =====================================================================
-   06 — TAGS / BADGES DE CATEGORIZAÇÃO
-========================================================================= */
 .badges {
   display: flex;
   flex-wrap: wrap;
@@ -563,9 +506,6 @@ button:disabled,
   color: #235a79;
 }
 
-/* =====================================================================
-   07 — ALERTAS CONTEXTUAIS
-========================================================================= */
 .alert {
   display: flex;
   align-items: flex-start;
@@ -619,9 +559,6 @@ button:disabled,
   color: var(--clr-surface);
 }
 
-/* =====================================================================
-   08 — MODAIS (técnica :target, sem JavaScript)
-========================================================================= */
 .modal {
   display: none;
   position: fixed;
@@ -707,9 +644,6 @@ button:disabled,
   gap: var(--space-sm);
 }
 
-/* =====================================================================
-   09 — HERO (index.html)
-========================================================================= */
 .hero {
   background: linear-gradient(
     150deg,
@@ -802,9 +736,6 @@ button:disabled,
   }
 }
 
-/* =====================================================================
-   10 — SEÇÃO INSTITUCIONAL / MISSÃO (index.html)
-========================================================================= */
 #sobre-nos {
   padding: var(--space-3xl) 0;
 }
@@ -893,9 +824,6 @@ button:disabled,
   }
 }
 
-/* =====================================================================
-   11 — GALERIA E DEPOIMENTO (index.html)
-========================================================================= */
 #galeria-impacto {
   background: var(--clr-primary-100);
   padding: var(--space-3xl) 0;
@@ -938,6 +866,7 @@ button:disabled,
   background: var(--clr-surface);
   border-radius: var(--radius-md);
   padding: var(--space-xl);
+  margin-top: var(--space-2xl);
   box-shadow: var(--shadow-card);
   display: flex;
   flex-direction: column;
@@ -985,16 +914,12 @@ button:disabled,
   }
 }
 
-/* =====================================================================
-   12 — FAIXA DE CHAMADA (CTA final)
-========================================================================= */
 .cta-final {
-  
   padding: var(--space-2xl) var(--space-md);
 }
 
 .cta-conteudo {
-  max-width: 600px;
+  max-width: 1000px;
   margin: 0 auto;
   text-align: center;
   display: flex;
@@ -1005,19 +930,26 @@ button:disabled,
 
 .cta-conteudo h2 {
   color: var(--clr-primary-500);
+  max-width: 70%;
 }
 
 .cta-conteudo p {
   color: var(--clr-accent-700);
-  font-size: var(--fs-3);
+  font-size: var(--fs-2);
+  max-width: 90%;
 }
 
-/* =====================================================================
-   13 — CARDS DE PROJETOS (projetos.html)
-========================================================================= */
 #conteudo-projetos {
   padding: var(--space-2xl) 0 var(--space-2xl);
 }
+
+@media (min-width: 1024px) {
+  
+  .cta-conteudo p {
+    max-width: 50%;
+  }
+  }
+
 
 .titulo-pagina-container {
   max-width: 850px;
@@ -1090,7 +1022,6 @@ button:disabled,
   font-size: var(--fs-1);
 }
 
-/* Sotaque de cor por frente de atuação */
 .card-projeto[data-area="saude"] {
   border-top-color: var(--clr-info);
 }
@@ -1116,9 +1047,6 @@ button:disabled,
   }
 }
 
-/* =====================================================================
-   14 — SEÇÃO DE DOAÇÕES (projetos.html)
-========================================================================= */
 #doacoes .alert {
   margin-bottom: var(--space-xl);
 }
@@ -1173,9 +1101,6 @@ button:disabled,
   }
 }
 
-/* =====================================================================
-   15 — FORMULÁRIO DE CADASTRO (cadastro.html)
-========================================================================= */
 #conteudo-cadastro {
   padding: var(--space-2xl) 0 var(--space-3xl);
 }
@@ -1315,9 +1240,6 @@ textarea:invalid:not(:placeholder-shown) {
   }
 }
 
-/* =====================================================================
-   16 — RODAPÉ
-========================================================================= */
 .site-footer {
   background: linear-gradient(
     160deg,
@@ -1422,9 +1344,6 @@ textarea:invalid:not(:placeholder-shown) {
   color: rgba(255, 255, 255, 0.7);
 }
 
-/* =====================================================================
-   17 — AJUSTES FINOS DE RESPONSIVIDADE
-========================================================================= */
 @media (max-width: 480px) {
   h1 {
     font-size: var(--fs-4);
