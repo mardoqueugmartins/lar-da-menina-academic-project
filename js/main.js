@@ -4,9 +4,9 @@ import { inicializarGraficoImpacto } from "./modules/chart.js";
 
 import { inicializarEventos } from "./modules/events.js";
 
-document.addEventListener("DOMContentLoaded", () => {
-  
+import { iniciarCarrossel } from "./carrossel.js";
 
+document.addEventListener("DOMContentLoaded", () => {
   inicializarEventos();
 
   const paginaAtual = window.location.pathname.split("/").pop();
@@ -16,4 +16,12 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   inicializarGraficoImpacto();
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  inicializarEventos();
+
+  inicializarGraficoImpacto();
+
+  iniciarCarrossel();
 });
