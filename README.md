@@ -1,69 +1,78 @@
-# Lar da Menina - Plataforma Web Institucional
+# Girls' Home - Institutional Web Platform
 
-> Projeto acadêmico desenvolvido para a instituição **Lar da Menina** (Maceió - AL), uma organização sem fins lucrativos que acolhe meninas de 6 a 15 anos em situação de vulnerabilidade social.
+> Academic project developed for the institution **Girls' Home** (Maceió - AL), a non-profit organization that shelters girls aged 6 to 15 in situations of social vulnerability.
 
-O objetivo da plataforma é dar visibilidade às frentes de atuação da instituição (Saúde, Educação, Esporte e Cultura), facilitar o processo de arrecadação de doações e automatizar o cadastro de novos voluntários e parceiros.
-
----
-
-## Funcionalidades Principais
-
-- **Apresentação Institucional:** Páginas detalhando a missão, visão, pilares de atuação e o impacto social da ONG.
-- **Painel de Projetos:** Divisão clara das frentes de ação (Saúde e Proteção, Educação e Futuro, Esporte, Lazer e Cultura).
-- **Módulo de Doações:** Informações centralizadas para arrecadação via Pix, transferência bancária, doação de insumos ou apadrinhamento mensal.
-- **Formulário de Engajamento:** Sistema de cadastro de colaboradores (voluntários ou doadores) com validação de dados pessoais e endereço.
-- **Política de Privacidade Integrada:** Modal explicativo sobre o uso e proteção de dados em conformidade com as boas práticas (LGPD).
+The platform's objective is to give visibility to the institution's areas of activity (Health, Education, Sports and Culture), facilitate the donation collection process, and automate the registration of new volunteers and partners.
 
 ---
 
-## Tecnologias Utilizadas
+## Main Features
 
-- HTML5: estrutura das páginas da aplicação.
-- CSS3: estilização e organização visual.
-- JavaScript: interações e comportamentos dinâmicos.
-- Git/GitHub: controle de versão e gerenciamento do código.
-- VS Code: ambiente de desenvolvimento.
+- **Institutional Presentation:** Pages detailing the mission, vision, pillars of action, and the social impact of the NGO.
+
+- **Projects Panel:** Clear division of areas of action (Health and Protection, Education and Future, Sports, Leisure and Culture).
+
+- **Donations Module:** Centralized information for fundraising via Pix, bank transfer, donation of supplies, or monthly sponsorship.
+
+- **Engagement Form:** Registration system for collaborators (volunteers or donors) with validation of personal data and address.
+
+- **Integrated Privacy Policy:** Explanatory modal on the use and protection of data in accordance with best practices (LGPD).
 
 ---
 
-## Como Executar o Projeto Localmente
+## Technologies Used
 
-Siga as instruções abaixo para rodar o projeto em sua máquina:
+- HTML5: structure of the application pages.
 
-### Pré-requisitos
-Você só precisa de um navegador web atualizado (como Google Chrome, Brave, Firefox ou Edge) instalado no seu computador.
+- CSS3: styling and visual organization.
 
-### Passo a Passo
+- JavaScript: interactions and dynamic behaviors.
+
+- Git/GitHub: version control and code management.
+
+- VS Code: development environment.
+
+---
+
+## How to Run the Project Locally
+
+Follow the instructions below to run the project on your machine:
+
+### Prerequisites
+You only need an updated web browser (such as Google Chrome, Brave, Firefox, or Edge) installed on your computer.
+
+### Step-by-Step
 
 ```bash
-# 1. Clone o repositório para a sua máquina
+# 1. Clone the repository to your machine
 git clone https://github.com/mardoqueugmartins/lar-da-menina-academic-project.git
 
-# 2. Acesse a pasta do projeto
-cd NOME_DO_REPOSITORIO
+# 2. Access the project folder
+cd REPOSITORY_NAME
 
-# 3. Abra o projeto
-# Basta dar um duplo clique no arquivo 'index.html' na raiz do projeto 
-# ou arrastá-lo para dentro do seu navegador.
+# 3. Open the project
+# Simply double-click the 'index.html' file in the project root
+
+# or drag it into your browser.
+
 ```
 
-*Dica de desenvolvimento:* Se você utiliza o **VS Code**, recomendo instalar a extensão **Live Server** para rodar o projeto em um servidor local automático que atualiza a página a cada alteração salva.
-
+*Development tip:* If you use **VS Code**, I recommend installing the **Live Server** extension to run the project on an automatic local server that updates the page with each saved change.
 
 ---
 
-## Visualização do Projeto
+## Project Visualization
 
-Você pode acessar o projeto rodando em produção através do link:
+You can access the project running in production through the link:
+
 **https://lar-da-menina-academic-project.vercel.app**
 
 ---
 
-## Desenvolvedor
+## Developer
 
+* **Mardoqueu Martins** - *Full Stack Developer (in training).*
 
-* **Mardoqueu Martins** - *Desenvolvedor Full Stack (em formação).*
+## Academic Context
 
-## Contexto Acadêmico
-
-Este projeto foi desenvolvido como parte da disciplina de **Desenvolvimento Front-End Para Web** na faculdade **Cruzeiro do Sul**, sob a orientação do(a) Prof(a). **Cassius Gomes** em **2026**.
+This project was developed as part of the **Front-End Web Development** course at **Cruzeiro do Sul** University, under the guidance of Professor **Cassius Gomes** in **2026**.
