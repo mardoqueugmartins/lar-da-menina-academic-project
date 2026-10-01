@@ -57,6 +57,14 @@ Você pode acessar o projeto rodando em produção através do link:
 
 ---
 
+---
+
+## Atualizações da versão 1.0.0
+
+Foram realizadas melhorias na organização do projeto, acessibilidade e documentação da aplicação.
+
+---
+
 ## Desenvolvedor
 
 
