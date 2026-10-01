@@ -55,7 +55,7 @@ cd NOME_DO_REPOSITORIO
 ## Visualização do Projeto
 
 Você pode acessar o projeto rodando em produção através do link:
-**[Em desenvolvimento]**
+**https://lar-da-menina-academic-project.vercel.app**
 
 ---
 
