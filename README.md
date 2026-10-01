@@ -18,9 +18,11 @@ O objetivo da plataforma é dar visibilidade às frentes de atuação da institu
 
 ## Tecnologias Utilizadas
 
-O projeto foi construído utilizando as seguintes tecnologias:
-
-Em desenvolvimento
+- HTML5: estrutura das páginas da aplicação.
+- CSS3: estilização e organização visual.
+- JavaScript: interações e comportamentos dinâmicos.
+- Git/GitHub: controle de versão e gerenciamento do código.
+- VS Code: ambiente de desenvolvimento.
 
 ---
 
