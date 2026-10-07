@@ -1015,6 +1015,7 @@ button:disabled,
 }
 
 #frentes-atuacao,
+#impacto,
 #doacoes {
   max-width: var(--container-max);
   margin: 0 auto;
@@ -1022,8 +1023,15 @@ button:disabled,
 }
 
 #frentes-atuacao h2,
+#impacto h2,
 #doacoes h2 {
   margin-bottom: var(--space-xl);
+}
+
+.grafico-container {
+  position: relative;
+  max-width: 720px;
+  margin: 0 auto;
 }
 
 .grid-projetos {
